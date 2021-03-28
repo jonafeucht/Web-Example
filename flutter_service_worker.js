@@ -3,16 +3,16 @@ const MANIFEST = 'flutter-app-manifest';
 const TEMP = 'flutter-temp-cache';
 const CACHE_NAME = 'flutter-app-cache';
 const RESOURCES = {
-  "version.json": "85539e9189a4daa9496d955dcdce5cf7",
-"index.html": "7e2c92ba5ab9f133e5b11d8aa2110f3f",
-"/": "7e2c92ba5ab9f133e5b11d8aa2110f3f",
-"main.dart.js": "eac7028ab32a23099728f3c51eae0060",
+  "version.json": "5a7c38e54246316a6a8a9b5f96d8660e",
+"index.html": "6b5c69a98a471e2d961c6368c0e5726a",
+"/": "6b5c69a98a471e2d961c6368c0e5726a",
+"main.dart.js": "508c46775d7ce46e73b4d1100081e07c",
 "favicon.png": "5dcef449791fa27946b3d35ad8803796",
 "icons/Icon-192.png": "ac9a721a12bbc803b44f645561ecb1e1",
 "icons/Icon-512.png": "96e752610906ba2a93c65f8abe1645f1",
 "manifest.json": "15f73b7e8a8209c2206210b3ac8dea1b",
 "assets/AssetManifest.json": "3600f98cdcd88bfd1900dd50f41256fe",
-"assets/NOTICES": "7fb2750f6940ca9978fde87e7aba9bdb",
+"assets/NOTICES": "3103bd6f0c7640e886a7db0228f7cc12",
 "assets/FontManifest.json": "7b2a36307916a9721811788013e65289",
 "assets/packages/flutter_inappwebview/t_rex_runner/t-rex.css": "5a8d0222407e388155d7d1395a75d5b9",
 "assets/packages/flutter_inappwebview/t_rex_runner/t-rex.html": "16911fcc170c8af1c5457940bd0bf055",
@@ -34,7 +34,7 @@ self.addEventListener("install", (event) => {
   return event.waitUntil(
     caches.open(TEMP).then((cache) => {
       return cache.addAll(
-        CORE.map((value) => new Request(value + '?revision=' + RESOURCES[value], {'cache': 'reload'})));
+        CORE.map((value) => new Request(value, {'cache': 'reload'})));
     })
   );
 });
