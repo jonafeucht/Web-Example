@@ -1,4 +1,4 @@
 # Web-Example
-Web example for https://github.com/jonatadashi/youtube_plyr_iframe
+Web example for https://github.com/smalldreams/youtube_plyr_iframe
 
-Live demo at: https://jonatadashi.github.io/Web-Example/
+Live demo at: https://smalldreams.github.io/Web-Example/
